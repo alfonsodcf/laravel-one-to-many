@@ -29,4 +29,22 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data:{
+        currentForm: null,
+        postid: null
+    },
+    methodts:{
+        openModal(e,id){
+            e.preventDefault();
+            console.log(id);
+            this.postid = id;
+            console.log(e.currentTarget);
+            this.currentForm= e.currentTarget.parentNode;
+            console.log(this.currentForm);
+            $('#deleteModal').modal('show');
+        },
+        submitForm(){
+            this.currentForm.submit();
+        }
+    }
 });
