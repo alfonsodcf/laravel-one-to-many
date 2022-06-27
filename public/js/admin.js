@@ -49794,7 +49794,25 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    currentForm: null,
+    postid: null
+  },
+  methodts: {
+    openModal: function openModal(e, id) {
+      e.preventDefault();
+      console.log(id);
+      this.postid = id;
+      console.log(e.currentTarget);
+      this.currentForm = e.currentTarget.parentNode;
+      console.log(this.currentForm);
+      $('#deleteModal').modal('show');
+    },
+    submitForm: function submitForm() {
+      this.currentForm.submit();
+    }
+  }
 });
 
 /***/ }),
@@ -49942,9 +49960,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\boolean\Laravel\laravel-auth\resources\js\admin.js */"./resources/js/admin.js");
-__webpack_require__(/*! D:\boolean\Laravel\laravel-auth\resources\sass\admin.scss */"./resources/sass/admin.scss");
-module.exports = __webpack_require__(/*! D:\boolean\Laravel\laravel-auth\resources\sass\front.scss */"./resources/sass/front.scss");
+__webpack_require__(/*! D:\boolean\Laravel\laravel-one-to-many\resources\js\admin.js */"./resources/js/admin.js");
+__webpack_require__(/*! D:\boolean\Laravel\laravel-one-to-many\resources\sass\admin.scss */"./resources/sass/admin.scss");
+module.exports = __webpack_require__(/*! D:\boolean\Laravel\laravel-one-to-many\resources\sass\front.scss */"./resources/sass/front.scss");
 
 
 /***/ })
