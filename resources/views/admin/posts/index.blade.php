@@ -12,14 +12,14 @@
         </button>
       </div>
       <div class="modal-body">
-        Sei sicuro di voler eliminare il post con id @{{postid}}
+        Sei sicuro di voler eliminare il post con id @{{postid}} ?
       </div>
      
-      <div class="modal-body">
-
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" @@click="submitForm()">Save changes</button>
       </div>
     </div>
-
   </div>
 
 </div>
